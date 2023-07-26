@@ -3,12 +3,6 @@
     <head>
         <title>character counter</title>
         <meta charset="utf-8"/>
-        <script>
-            function getCharCount(str) {
-                const search = new URLSearchParams(str);
-                return decodeURIComponent(search.get("w") || '').length;
-            }
-        </script>
     </head>
     <body>
         <p id="count"></p>
@@ -16,7 +10,8 @@
             document.addEventListener(
                 'DOMContentLoaded',
                 e => {
-                    const count = getCharCount(location.search);
+                    const search = new URLSearchParams(str);
+                    const count = decodeURIComponent(search.get("w") || '').length;
                     const element = document.getElementById('count');
                     
                     element.innerText = `${count} 文字です。`;
