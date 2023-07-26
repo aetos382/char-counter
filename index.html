@@ -10,7 +10,7 @@
             document.addEventListener(
                 'DOMContentLoaded',
                 e => {
-                    const search = new URLSearchParams(str);
+                    const search = new URLSearchParams(location.search);
                     const count = decodeURIComponent(search.get("w") || '').length;
                     const element = document.getElementById('count');
                     
