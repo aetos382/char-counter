@@ -16,7 +16,7 @@
                 'DOMContentLoaded',
                 e => {
                     const search = new URLSearchParams(location.search);
-                    const count = decodeURIComponent(search.get("w") || '').length;
+                    const count = decodeURIComponent(search.get('w') || '').length;
                     const element = document.getElementById('count');
                     
                     element.innerText = `${count} 文字です。`;
